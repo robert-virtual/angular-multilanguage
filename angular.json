@@ -4,6 +4,12 @@
   "newProjectRoot": "projects",
   "projects": {
     "multilanguage": {
+      "i18n": {
+        "sourceLocale": "es-HN",
+        "locales": {
+          "en-US": "src/locale/messages.en.xlf"
+        }
+      },
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,6 +19,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "localize": ["en-US"],
             "outputPath": "dist/multilanguage",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -94,5 +101,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
